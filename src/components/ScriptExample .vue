@@ -18,10 +18,10 @@ export default {
     },
     methods: {
         show_info: function (){
-            let main = document.querySelector(`.main`)
+            let main = document.querySelector( `.main` );
             for ( let i = 0; i < this.Tweets.length; i++ ) {
                 main.insertAdjacentHTML(`beforeend`,
-`<h1>${this.Tweets[i]}</h1>`);
+                        `<h1>${this.Tweets[i]}</h1>`);
             }
             if ( this.logged_in === true ) {
                 main.insertAdjacentHTML(`beforeend` ,`<h2> user loged is ${this.logged_in}</h2>`)
@@ -30,6 +30,10 @@ export default {
             {
                 main.insertAdjacentHTML(`beforeend` ,`<h2> user loged is ${this.logged_in}</h2>`)
 
+            }
+            for ( let i = 0; i < this.num_friends.length; i++ ) {
+                main.insertAdjacentHTML(`beforeend`,
+                        `<h1>${this.num_friends[i]}</h1>`);
             }
         }
     },
