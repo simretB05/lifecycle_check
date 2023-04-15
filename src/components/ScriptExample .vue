@@ -12,7 +12,7 @@ export default {
             Tweets: [`Pokemon types`, `Pokemon power`, `Pokemon funs`],
             name: [`Absol`, `Aipom`, `Alakazam`],
             num_friends: [1023, 10897, 46678],
-            logged_in: true,
+            logged_in: false,
 
         }
     },
@@ -20,10 +20,17 @@ export default {
         show_info: function (){
             let main = document.querySelector(`.main`)
             for ( let i = 0; i < this.Tweets.length; i++ ) {
-                main.insertAdjacentHTML(`afterbegin`,
+                main.insertAdjacentHTML(`beforeend`,
 `<h1>${this.Tweets[i]}</h1>`);
             }
-            main.insertAdjacentHTML(`beforebegin` ,`<h2>${this.logged_in}</h2>`)
+            if ( this.logged_in === true ) {
+                main.insertAdjacentHTML(`beforeend` ,`<h2> user loged is ${this.logged_in}</h2>`)
+
+            } else
+            {
+                main.insertAdjacentHTML(`beforeend` ,`<h2> user loged is ${this.logged_in}</h2>`)
+
+            }
         }
     },
     mounted()
