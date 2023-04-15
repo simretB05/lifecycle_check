@@ -15,9 +15,8 @@ export default {
     },
     beforeMount: function ()
     {
-        console.log(`itsnot mounted`)
-    }
-,
+        console.log(`its not mounted`)
+    },
     mounted: function (){
             console.log(`its mounted`)
     },
